@@ -3,8 +3,8 @@
 #include <string.h>
 #include "consultas.h"
 
-ConexionDB* connbd() {
-    ConexionDB *con = (ConexionDB *) malloc(sizeof(ConexionDB));
+ConnBD* connbd() {
+    ConnBD *con = (ConnBD *) malloc(sizeof(ConnBD));
     if (con == NULL) {
         fprintf(stderr, "Error al asignar memoria para la conexión.\n");
         return NULL;
@@ -28,7 +28,7 @@ ConexionDB* connbd() {
     return con;
 }
 
-void cerrar_conexion(ConexionDB *con) {
+void cerrar_conexion(ConnBD *con) {
     if (con != NULL) {
         mysql_close(con->conn);
         free(con);
@@ -36,7 +36,7 @@ void cerrar_conexion(ConexionDB *con) {
     }
 }
 
-int insertar_datos(ConexionDB *con, const char *nombre, int edad, int matricula, int grado, const char *materia) {
+int insertar_datos(ConnBD *con, const char *nombre, int edad, int matricula, int grado, const char *materia) {
     if (con == NULL || con->conn == NULL) {
         fprintf(stderr, "Conexión no válida.\n");
         return -1;
