@@ -17,7 +17,7 @@ ConnBD* connbd() {
         return NULL;
     }
 
-    if (mysql_real_connect(con->conn, "localhost", "yael", "12345", "mosquito_db", 0, NULL, 0) == NULL) {
+    if (mysql_real_connect(con->conn, "localhost", "carlos", "teso2", "mosquito_db", 0, NULL, 0) == NULL) {
         fprintf(stderr, "Error al conectar a la base de datos: %s\n", mysql_error(con->conn));
         mysql_close(con->conn);
         free(con);
