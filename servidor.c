@@ -13,13 +13,13 @@ struct mensaje {
     char texto[MSG_SIZE];
 };
 
-void procesar_mensaje(const char *mensaje) {
+void procesar_mensaje(const char *msj) {
     char nombre[50], materia[50];
     int edad, matricula, grado;
 
-    if (sscanf(mensaje, "Nombre: %49[^,], Edad: %d, Matricula: %d, Grado: %d, Materia: %49s",
+    if (sscanf(msj, "Nombre: %49[^,], Edad: %d, Matricula: %d, Grado: %d, Materia: %49s",
                nombre, &edad, &matricula, &grado, materia) != 5) {
-        fprintf(stderr, "Error: Formato de mensaje incorrecto: %s\n", mensaje);
+        fprintf(stderr, "Error: Formato de mensaje incorrecto: %s\n", msj);
         return;
     }
 
