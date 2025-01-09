@@ -11,7 +11,7 @@ typedef struct {
  * @brief 
  * @return 
  */
-ConexionDB* conexion_bd();
+ConexionDB* connbd();
 
 /**
  * @brief 
