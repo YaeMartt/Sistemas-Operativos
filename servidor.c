@@ -30,7 +30,7 @@ void procesar_mensaje(const char *mensaje) {
     printf("Grado: %d\n", grado);
     printf("Materia: %s\n", materia);
 
-    ConexionDB *conexion = conexion_bd();
+    ConnBD *conexion = connbd();
     if (conexion == NULL) {
         fprintf(stderr, "Error al conectar con la base de datos.\n");
         return;
