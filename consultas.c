@@ -52,6 +52,6 @@ int insertar_datos(ConnBD *con, const char *nombre, int edad, int matricula, int
         return -1;
     }
 
-    printf("Datos insertados correctamente");
+    printf("Datos insertados correctamente")
     return 0;
 }
