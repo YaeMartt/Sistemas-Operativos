@@ -4,7 +4,7 @@
 #include <mariadb/mysql.h>
 
 typedef struct {
-} ConnBD
+} ConnBD;
 
 
 /**
