@@ -4,20 +4,20 @@
 #include <mariadb/mysql.h>
 
 typedef struct {
-} ConexionDB;
+} ConnBD;
 
 
 /**
  * @brief 
  * @return 
  */
-ConexionDB* connbd();
+ConnBD* connbd();
 
 /**
  * @brief 
  * @param 
  */
-void cerrar_conexion(ConexionDB *conexion);
+void cerrar_conexion(ConnBD *conexion);
 
 /**
  * @brief 
@@ -29,6 +29,6 @@ void cerrar_conexion(ConexionDB *conexion);
  * @param materia 
  * @return 
  */
-int insertar_datos(ConexionDB *conexion, const char *nombre, int edad, int matricula, int grado, const char *materia);
+int insertar_datos(ConnBD *conexion, const char *nombre, int edad, int matricula, int grado, const char *materia);
 
 #endif
