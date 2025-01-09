@@ -3,7 +3,7 @@
 #include <string.h>
 #include "consultas.h"
 
-ConexionDB* conexionbd() {
+ConexionDB* connbd() {
     ConexionDB *con = (ConexionDB *) malloc(sizeof(ConexionDB));
     if (con == NULL) {
         fprintf(stderr, "Error al asignar memoria para la conexión.\n");
